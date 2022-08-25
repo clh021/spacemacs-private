@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: 当前日期
+# contributor: jiftle <lixugood@126.com>
+# key: date
+# --
+`(format-time-string "%Y-%m-%d")`$0
