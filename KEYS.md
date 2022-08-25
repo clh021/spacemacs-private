@@ -1,4 +1,6 @@
 # 快捷键
+
+
 ```
 快速定位
 跳转到指定字符    SPC j j [char]
@@ -41,9 +43,23 @@ manual手册                    SPC h m
 终端
 打开eshell                    SPC !
 
-Git提交
+Git
+Git St 窗口              SPC g s
+    y    查看 refs
+    b    管理 branch
+        m m  Merge Action
+    c c   提交
+    P m   Push
+    l l   Log
+        d r   Diff
+    f u   Fetch
+    F u   Pull
 
+Git staged 当前文件      SPC g S
+    u/U   是否 staged
 
 重构
 
 ```
+
+代码补全
