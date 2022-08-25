@@ -1,0 +1,67 @@
+# Tabnine自动补全
+> http://www.nituchao.com/os-tool/spacemacs-tabnine.html
+TabNine是一款基于GPT-2深度学习算法的代码补全工具，它支持23种编程语言，6种编辑器（Emacs, Vim, Visual Studio Code, Atom, IntelliJ IDEA, Sublime Text等），TabNine除了能在pop框中提示补全信息之外，还能给出各个候选词条的概率，效果十分惊艳。
+
+在Spacemacs上，插件company-tabnine提供了一种TabNine的后端实现。
+
+为了支持TabNine，我的思路是使用调用链：auto-completion -> company -> company-tabnine，其中auto-completion是Spacemacs提供的自动补全插件，支持多种后端（company和auto-complete）。
+
+## 实现
+1. 创建layer
+在Spacemacs上，使用SPC SPC或M-x，调出命令功能，进行以下三步创建一个名为sp-tabnine的layer。
+
+输入configuration-layer/create-layer
+询问Configuration layer path，使用默认的~/.emacs.d/private/即可，按RETURN
+询问Configuration layer name，输入sp-tabnine，按RETURN
+询问Create readme? (y or n)，输入n
+2. 配置layer
+打开~/.eamcs.d/private/sp-tabnine/package.el文件，写入如下配置：
+```lisp
+;;; Code:
+ 
+;;; 声明tabnine这个layer，并安装compnay-tabnine这个库
+(defconst sp-tabnine-packages
+  '(company-tabnine)
+  )
+ 
+;;; 初始化company-tabnine这个库
+(defun sp-tabnine/init-company-tabnine()
+  (use-package company-tabnine
+    :ensure t
+    :defer t
+    :init
+    :config)
+  )
+ 
+;;; 配置company-tabnine作为company的后端
+(defun sp-tabnine/post-init-company-tabnine()
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends #'company-tabnine)
+    )
+  )
+ 
+;;; packages.el ends here
+```
+3，使用layer
+在~/.spacemacs的dotspacemacs-configuration-layers添加新定义的layer，即tabnine。
+```lisp
+;; List of configuration layers to load.
+dotspacemacs-configuration-layers
+   '(
+     auto-completion
+     better-defaults
+     version-control
+     emacs-lisp
+     git
+     ivy
+     sp-tabnine
+     )
+```
+4，验证TabNine
+重启Emacs，输入一段代码，即可享受TabNine提供的代码补全功能。
+
+> Note: 如果自动补全没有触发，可以手动开启，SPC SPC或者M-x，输入company-mode，提示Company mode enabled in current buffer。
+
+
+
+
