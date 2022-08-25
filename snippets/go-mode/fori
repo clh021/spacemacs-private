@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for循环
+# contributor: jiftle <lixugood@126.com>
+# key: fori
+# --
+for $0 := 0; $1 < count; $2++ {
+
+}
