@@ -53,6 +53,7 @@
       (unset-proxy)
     (set-proxy)))
 ```
+https://github.com/stardiviner/proxy-mode
 
 # 快捷键
 
