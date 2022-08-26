@@ -6,6 +6,7 @@
 ```
 https://emacs-china.org/t/multi-translate-el/13865/42
 https://github.com/manateelazycat/popweb
+http://download.huzheng.org/zh_CN/
 ```
 
 ## 代理
