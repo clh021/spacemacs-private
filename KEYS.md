@@ -30,9 +30,11 @@ evil-window-down	SPC w j	切换到下面的窗口
 evil-window-up	SPC w k	切换到上面的窗口
 evil-window-right	SPC w l	切换到右边的窗口
 快速删除窗口
-Emacs 中可以使用 C-x 0 来删除一个窗口，Spacemacs 中也可以使用 SPC w d 来删除一个窗口，如果你希望删除窗口的同时删除对应的 buffer，可以使用 kill-buffer-and-window SPC w x
+Emacs 中可以使用 C-x 0 来删除一个窗口，Spacemacs 中也可以使用 SPC w d 来删除一个窗口
+如果你希望删除窗口的同时删除对应的 buffer，可以使用 kill-buffer-and-window SPC w x
 快速转换分屏类型
-如果要将上下或左右分屏的窗口转换为另一个类型，可以使用 window-layout-toggle SPC w + 它可以位于焦点上的上下分屏转换为左右分屏，将左右分屏转换为上下分屏
+如果要将上下或左右分屏的窗口转换为另一个类型，可以使用 window-layout-toggle SPC w + 
+它可以位于焦点上的上下分屏转换为左右分屏，将左右分屏转换为上下分屏
 
 快速定位
 跳转到指定字符    SPC j j [char]
@@ -102,12 +104,25 @@ manual手册                    SPC h m
 打开系统的 shell               SPC '
 
 Git
+查看当前文件的修改记录       SPC g b
+文件时光机                 SPC g t
+    n   向后一个版本
+    N/p 向前一个版本
+    Y   拷贝当前版本的 git hash 值
+    q   退出
+让单个文件回到某个版本       
 Git staged 当前文件        SPC g S
 Git unstaged 当前文件      SPC g U
 Git St 窗口               SPC g s
+Untracked files
+s 将该文件加入 unStage files 列表即 unstage 区，相当于命令行上的 git add [filename]。 
+x 忽略该文件修改。 TAB 查看 diff q 返回
+Unstaged files
+u 撤销，即将该文件撤回到 Untracked 区。 TAB 查看 diff q 返回
     y    查看 refs
     b    管理 branch
         m m  Merge Action
+        b    切换分支
     c c   提交
     P m   Push
     l l   Log
