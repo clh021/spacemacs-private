@@ -136,3 +136,11 @@ u 撤销，即将该文件撤回到 Untracked 区。 TAB 查看 diff q 返回
 ```
 
 代码补全
+> 希望可以结合语法本身的补全和 tabnine
+
+
+代理
+```lisp
+(setq url-gateway-method 'socks)
+(setq socks-server '("Default server" "127.0.0.1" 1080 5))
+```
