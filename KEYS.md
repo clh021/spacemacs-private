@@ -3,8 +3,9 @@
 > 希望可以结合语法本身的补全和 tabnine
 
 ## 翻译
-```lisp
-
+```
+https://emacs-china.org/t/multi-translate-el/13865/42
+https://github.com/manateelazycat/popweb
 ```
 
 ## 代理
