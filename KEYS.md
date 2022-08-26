@@ -9,8 +9,11 @@
 (setq socks-server '("Default server" "127.0.0.1" 1080 5))
 ```
 也可以定义一个 toggle （spacemacs 自带有定义 toggle 的函数，可以用那个），需要的时候就打开，不需要就关闭。
-
 实现很简单，不需要的时候，把 url-gateway-method 的值恢复为默认值就行了。
+```lisp
+(setq url-gateway-local-host-regexp
+      (concat "\\`" (regexp-opt '("localhost" "127.0.0.1")) "\\'"))
+```
 
 
 # 快捷键
