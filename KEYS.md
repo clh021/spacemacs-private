@@ -102,7 +102,9 @@ manual手册                    SPC h m
 打开系统的 shell               SPC '
 
 Git
-Git St 窗口              SPC g s
+Git staged 当前文件        SPC g S
+Git unstaged 当前文件      SPC g U
+Git St 窗口               SPC g s
     y    查看 refs
     b    管理 branch
         m m  Merge Action
@@ -113,8 +115,6 @@ Git St 窗口              SPC g s
     f u   Fetch
     F u   Pull
 
-Git staged 当前文件      SPC g S
-    u/U   是否 staged
 
 重构
 
