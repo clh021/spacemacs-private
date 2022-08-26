@@ -69,7 +69,7 @@ C-r 重做
 
 g c c 注释、反注释
 快速插入代码片段              SPC i s
-对于 Linux 用户，可能有使用 sudo 编辑文件的需要，此时可以使用 sudo -E emacs <filename> 来保留用户环境并加载当前用户（而不是 root 用户）的 Emacs 配置
+sudo -E emacs <filename> 来保留用户环境并加载当前用户（而不是 root 用户）的 Emacs 配置
 命令	快捷键	描述
 rename-current-buffer-file	SPC f R	重命名当前的文件
 insert-file	SPC f i	将另一个文件中的内容插入到当前文件
