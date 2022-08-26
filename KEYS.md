@@ -15,6 +15,14 @@
       (concat "\\`" (regexp-opt '("localhost" "127.0.0.1")) "\\'"))
 ```
 
+```lisp
+(defun dotspacemacs/user-init ()
+   (setq url-proxy-services '(
+                              ("http" . "www.xxx.com:8080")
+                              ("https" . "www.xxx.com:8080")
+                              ))
+)
+```
 
 # 快捷键
 
