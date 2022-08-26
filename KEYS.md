@@ -1,9 +1,13 @@
 
-# 代码补全
+## 代码补全
 > 希望可以结合语法本身的补全和 tabnine
 
+## 翻译
+```lisp
 
-# 代理
+```
+
+## 代理
 ```lisp
 (setq url-gateway-method 'socks)
 (setq socks-server '("Default server" "127.0.0.1" 1080 5))
@@ -57,9 +61,8 @@ https://github.com/stardiviner/proxy-mode
 
 # 快捷键
 
-
+## 文件tree操作
 ```
-文件tree操作
 按键	对应的操作
 ?	查看帮助
 cf	新建文件
@@ -78,9 +81,10 @@ tab-bar-switch-to-recent-tab 切换到最近的标签
 tab-bar-switch-to-next-tab 切换到下一个标签
 tab-bar-close-tab 关闭标签
 tab-bar-new-tab 新建标签
+```
 
-
-窗口
+## 窗口
+```
 命令	快捷键	描述
 evil-window-left	SPC w h	切换到左边的窗口
 evil-window-down	SPC w j	切换到下面的窗口
@@ -93,12 +97,18 @@ Emacs 中可以使用 C-x 0 来删除一个窗口，Spacemacs 中也可以使用
 如果要将上下或左右分屏的窗口转换为另一个类型，可以使用 window-layout-toggle SPC w + 
 它可以位于焦点上的上下分屏转换为左右分屏，将左右分屏转换为上下分屏
 
-快速定位
+```
+
+## 快速定位
+```
 跳转到指定字符    SPC j j [char]
 跳转到指定行      SPC j t
 跳转到定义/引用   SPC m g d
 
-搜索
+```
+
+## 搜索
+```
 搜索当前文件字符串      SPC s s
 搜索项目中的文件        SPC p f
 // 使用grep，性能好，适合大文件
@@ -113,7 +123,10 @@ counsel-find-file	SPC f f	使用 counsel 来查找文件
 find-file-literally	SPC f l	使用一个更轻量的工具来查找文件
 counsel-rencentf	SPC f r	使用 counsel 来查找最近打开的文件
 
-替换
+```
+
+## 替换
+```
 逐一询问替换字符串 M-%
 逐一询问替换匹配正则表达式的字符串 C-M-%
 替换项目内的字符串                SPC p R
@@ -150,17 +163,26 @@ SPC ;	快速注释当前行（按完后，还要再按一次 ; 进行确认）
 SPC ?	列出所有的快捷键
 SPC `	通过序号来切换窗口
 
-手册
+```
+
+## 手册
+```
 manual手册                    SPC h m
 函数说明
 变量说明
 
 
-终端
+```
+
+## 终端
+```
 打开eshell                    SPC !
 打开系统的 shell               SPC '
 
-Git
+```
+
+## Git
+```
 查看当前文件的修改记录       SPC g b
 文件时光机                 SPC g t
     n   向后一个版本
@@ -188,6 +210,8 @@ u 撤销，即将该文件撤回到 Untracked 区。 TAB 查看 diff q 返回
     F u   Pull
 
 
-重构
+```
 
+## 重构
+```
 ```
